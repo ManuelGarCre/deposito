@@ -33,7 +33,8 @@ class DepositoCombustibleTest {
 
 	@Test
 	void testEstaVacio() {
-		fail("No implementado aun");
+		tank = new DepositoCombustible(60.0, -23.0);
+		assertTrue(tank.estaVacio());
 	}
 
 	@Test
