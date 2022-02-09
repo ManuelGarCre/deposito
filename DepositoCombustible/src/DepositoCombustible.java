@@ -37,6 +37,10 @@ public class DepositoCombustible {
        if(depNivel < 0) {
    			depNivel = 0;
    		}
+       
+       if(tankLevel > tankMax) {
+			this.depNivel = tankMax;
+		}
     }
 
    /**
