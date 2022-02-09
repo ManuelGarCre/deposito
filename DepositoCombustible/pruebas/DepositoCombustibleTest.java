@@ -25,7 +25,10 @@ class DepositoCombustibleTest {
 
 	@Test
 	void testGetDepositoMax() {
-		fail("No implementado aun");
+		tank = new DepositoCombustible(30.0,20.0);
+		double esperado = 30.0;
+		double actual = tank.getDepositoMax();
+		assertEquals(esperado,actual);
 	}
 
 	@Test
