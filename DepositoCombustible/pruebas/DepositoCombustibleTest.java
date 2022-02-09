@@ -8,20 +8,11 @@ import org.junit.jupiter.api.Test;
 
 class DepositoCombustibleTest {
 
-	@BeforeAll
-	static void setUpBeforeClass() throws Exception {
-	}
-
-	@AfterAll
-	static void tearDownAfterClass() throws Exception {
-	}
-
-	@BeforeEach
-	void setUp() throws Exception {
-	}
+	private DepositoCombustible tank;
 
 	@AfterEach
 	void tearDown() throws Exception {
+		tank = null;
 	}
 
 	@Test
@@ -46,7 +37,11 @@ class DepositoCombustibleTest {
 
 	@Test
 	void testFill() {
-		fail("No implementado aun");
+		tank = new DepositoCombustible(85.0,60.0);
+		tank.fill(50.0);
+		assertEquals(85.0,tank.getDepositoNivel());
+		tank.fill(-100.0);
+		assertEquals(0.0,tank.getDepositoNivel());
 	}
 
 	@Test
