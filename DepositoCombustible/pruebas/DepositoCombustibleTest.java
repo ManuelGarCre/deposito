@@ -23,7 +23,9 @@ class DepositoCombustibleTest {
 	@Test
 	void testEstaVacio() {
 		tank = new DepositoCombustible(60.0, -23.0);
-		assertTrue(tank.estaVacio());
+		tank.fill(50);
+		tank.consumir(20);
+		assertFalse(tank.estaVacio());
 	}
 
 	@Test
