@@ -32,6 +32,7 @@ public class DepositoCombustible {
 	DepositoCombustible(double tankMax, double tankLevel) {
 		this.depMax   = tankMax;
 		this.depNivel = tankLevel;
+		
 		if(tankLevel > tankMax) {
 			this.depNivel = tankMax;
 		}
