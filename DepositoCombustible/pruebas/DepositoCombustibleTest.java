@@ -19,7 +19,7 @@ class DepositoCombustibleTest {
 	void testGetDepositoNivel() {
 		tank = new DepositoCombustible(40.0,50.0);
 		double devuelto = tank.getDepositoNivel();
-		double esperado = 50.0;
+		double esperado = 40.0;
 		assertEquals(esperado, devuelto);
 	}
 
